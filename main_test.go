@@ -166,6 +166,30 @@ func Test_RomanNumerals(t *testing.T) {
 			n:        100,
 			expected: "C",
 		},
+		{
+			n:        105,
+			expected: "CV",
+		},
+		{
+			n:        149,
+			expected: "CXLIX",
+		},
+		{
+			n:        150,
+			expected: "CL",
+		},
+		{
+			n:        200,
+			expected: "CC",
+		},
+		{
+			n:        300,
+			expected: "CCC",
+		},
+		{
+			n:        400,
+			expected: "CD",
+		},
 	}
 
 	for _, tt := range testCases {

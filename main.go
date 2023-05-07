@@ -16,7 +16,18 @@ func romanNumerals(n int) string {
 	roman := ""
 	remainder := n
 
-	centurions := n / 100
+	dees := n / 500
+	for i := 0; i < dees; i++ {
+		roman += "D"
+	}
+	remainder -= dees * 500
+
+	if remainder >= 400 && remainder%400 < 100 {
+		roman += "CD"
+		remainder -= 400
+	}
+
+	centurions := remainder / 100
 	for i := 0; i < centurions; i++ {
 		roman += "C"
 	}
@@ -34,7 +45,7 @@ func romanNumerals(n int) string {
 	remainder -= fifties * 50
 
 	if remainder >= 40 && remainder%40 < 10 {
-		roman = "XL" + roman
+		roman += "XL"
 		remainder -= 40
 	}
 
