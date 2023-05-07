@@ -22,6 +22,11 @@ func romanNumerals(n int) string {
 	}
 	remainder -= tens * 10
 
+	if remainder%4 == 0 {
+		roman += "IV"
+		return roman
+	}
+
 	fives := remainder / 5
 	for i := 0; i < fives; i++ {
 		roman += "V"
