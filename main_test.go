@@ -214,6 +214,14 @@ func Test_RomanNumerals(t *testing.T) {
 			n:        1000,
 			expected: "M",
 		},
+		{
+			n:        2000,
+			expected: "MM",
+		},
+		{
+			n:        3000,
+			expected: "MMM",
+		},
 	}
 
 	for _, tt := range testCases {
