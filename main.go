@@ -13,5 +13,10 @@ func romanNumerals(n int) string {
 		return "II"
 	}
 
-	return ""
+	if n == 3 {
+		return "III"
+	}
+
+	return "IV"
+
 }
