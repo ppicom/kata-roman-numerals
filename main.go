@@ -14,6 +14,10 @@ func romanNumerals(n int) string {
 		return "IV"
 	}
 
+	if n == 9 {
+		return "IX"
+	}
+
 	roman := ""
 
 	fives := n / 5
