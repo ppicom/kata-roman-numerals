@@ -16,7 +16,18 @@ func romanNumerals(n int) string {
 	roman := ""
 	remainder := n
 
-	dees := n / 500
+	thousands := n / 1000
+	for i := 0; i < thousands; i++ {
+		roman += "M"
+	}
+	remainder -= thousands * 1000
+
+	if remainder >= 900 && remainder%900 < 100 {
+		roman += "DM"
+		remainder -= 900
+	}
+
+	dees := remainder / 500
 	for i := 0; i < dees; i++ {
 		roman += "D"
 	}
