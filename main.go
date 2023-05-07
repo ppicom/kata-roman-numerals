@@ -19,13 +19,21 @@ func romanNumerals(n int) string {
 	}
 
 	roman := ""
+	remainder := n
 
-	fives := n / 5
+	tens := n / 10
+	for i := 0; i < tens; i++ {
+		roman += "X"
+	}
+	remainder -= tens * 10
+
+	fives := remainder / 5
 	for i := 0; i < fives; i++ {
 		roman += "V"
 	}
+	remainder -= fives * 5
 
-	for i := 0; i < (n - (fives * 5)); i++ {
+	for i := 0; i < remainder; i++ {
 		roman += "I"
 	}
 
