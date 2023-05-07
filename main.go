@@ -5,18 +5,20 @@ func main() {
 }
 
 func romanNumerals(n int) string {
-	if n == 1 {
-		return "I"
+
+	if n == 5 {
+		return "V"
 	}
 
-	if n == 2 {
-		return "II"
+	if n == 4 {
+		return "IV"
 	}
 
-	if n == 3 {
-		return "III"
+	roman := ""
+	for i := 0; i < n; i++ {
+		roman += "I"
 	}
 
-	return "IV"
+	return roman
 
 }
