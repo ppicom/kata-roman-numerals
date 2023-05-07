@@ -136,7 +136,7 @@ func Test_RomanNumerals(t *testing.T) {
 		},
 		{
 			n:        49,
-			expected: "XLIV",
+			expected: "XLIX",
 		},
 		{
 			n:        50,
