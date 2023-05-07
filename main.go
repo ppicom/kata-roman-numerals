@@ -16,7 +16,18 @@ func romanNumerals(n int) string {
 	roman := ""
 	remainder := n
 
-	fifties := n / 50
+	centurions := n / 100
+	for i := 0; i < centurions; i++ {
+		roman += "C"
+	}
+	remainder -= centurions * 100
+
+	if remainder >= 90 && remainder%90 < 10 {
+		roman = "XC" + roman
+		remainder -= 90
+	}
+
+	fifties := remainder / 50
 	for i := 0; i < fifties; i++ {
 		roman += "L"
 	}
