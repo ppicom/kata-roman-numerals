@@ -22,8 +22,13 @@ func romanNumerals(n int) string {
 	}
 	remainder -= tens * 10
 
-	if remainder%4 == 0 {
+	if remainder == 4 {
 		roman += "IV"
+		return roman
+	}
+
+	if remainder == 9 {
+		roman += "IX"
 		return roman
 	}
 
