@@ -30,6 +30,10 @@ func Test_RomanNumerals(t *testing.T) {
 			n:        5,
 			expected: "V",
 		},
+		{
+			n:        6,
+			expected: "VI",
+		},
 	}
 
 	for _, tt := range testCases {
